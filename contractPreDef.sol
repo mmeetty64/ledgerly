@@ -68,7 +68,7 @@ contract Ledgerly is ERC20("LedgerlyToken", "LED"){
     mapping(address => Role) public users;
     mapping(address => BanList) public banList;
 
-    constructor(string memory _nameTovar){
+    constructor(){
         address _shop = 0x70997970C51812dc3A010C7d01b50e0d17dc79C8;
         users[0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266] = Role.Owner;
 
@@ -84,29 +84,29 @@ contract Ledgerly is ERC20("LedgerlyToken", "LED"){
 
         shop[_shop] = Shop(unicode"123", unicode"text","logo.jpg", _shop);
         shops.push(Shop(unicode"123", unicode"text", "logo.jpg", _shop));
-        Catalog.push(Product(0, _nameTovar, unicode"Крутой роутер", 5*decim, _shop, 20, block.timestamp, true));
+        Catalog.push(Product(0, unicode"Роутер", unicode"Крутой роутер", 5*decim, _shop, 20, block.timestamp, true));
 
         prodImages[0] = ["price.jpg"];
 
-        Catalog.push(Product(1, _nameTovar, unicode"Крутой роутер", 5*decim, _shop, 20, block.timestamp, true));
+        Catalog.push(Product(1, unicode"Наушники", unicode"Крутые наушники", 10*decim, _shop, 20, block.timestamp, true));
 
-        prodImages[1] = ["price.jpg"];
+        prodImages[1] = ["beeheadphones.jpg"];
 
-        Catalog.push(Product(2, _nameTovar, unicode"Крутой роутер", 5*decim, _shop, 20, block.timestamp, true));
+        Catalog.push(Product(2, unicode"Поко фэ3", unicode"Лучший в мире телефон", 5*decim, _shop, 20, block.timestamp, true));
 
-        prodImages[2] = ["price.jpg"];
+        prodImages[2] = ["betterphone.jpg"];
 
-        Catalog.push(Product(3, _nameTovar, unicode"Крутой роутер", 5*decim, _shop, 20, block.timestamp, true));
+        Catalog.push(Product(3, unicode"Эйподсы", unicode"Очень дорого, не советую", 5*decim, _shop, 20, block.timestamp, true));
 
-        prodImages[3] = ["price.jpg"];
+        prodImages[3] = ["headphones.jpg"];
 
-        Catalog.push(Product(4, _nameTovar, unicode"Крутой роутер", 5*decim, _shop, 20, block.timestamp, true));
+        Catalog.push(Product(4, unicode"Айфон", unicode"Переоцененная шаблонная штука", 5*decim, _shop, 20, block.timestamp, true));
 
-        prodImages[4] = ["price.jpg"];
+        prodImages[4] = ["phone.jpg"];
 
-        Catalog.push(Product(5, _nameTovar, unicode"Крутой роутер", 5*decim, _shop, 20, block.timestamp, true));
+        Catalog.push(Product(5, unicode"Танк", unicode"Крутой, можно гвозди забивать!", 5*decim, _shop, 20, block.timestamp, true));
 
-        prodImages[5] = ["price.jpg"];
+        prodImages[5] = ["thebestphone.jpg"];
     }
 
     //USER (ПОЛЬЗОВАТЕЛЬ)
